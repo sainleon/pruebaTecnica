@@ -8,17 +8,20 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @Slf4j
 public class PalindromeService {
-    public PalindromeResponse processPalindrome(PalindromeRequest request) {
-        String cadena = request.getCadena();
-        log.info("INFO: CADENA "+cadena);
-        int lengthCadena = cadena.length();
-        boolean isPalindromo = new StringBuilder(cadena).reverse().toString().equals(cadena);
-        int lengthCaracteresEspeciales = cadena.replaceAll("[a-zA-Z0-9]", "").length();
+
+    public PalindromeResponse verificarPalindromo(PalindromeRequest request) {
+        String cadena = request.getPalindromo().replaceAll("\\s", "").toLowerCase();  // Remover espacios y caracteres especiales
+        String reversa = new StringBuilder(cadena).reverse().toString();
+
+        boolean esPalindromo = cadena.equals(reversa);
+
+        int totalCaracteresEspeciales = request.getPalindromo().replaceAll("[a-zA-Z\\s]", "").length();
+        int longitudCadena = request.getPalindromo().length();
 
         PalindromeResponse response = new PalindromeResponse();
-        response.setLengthCadena(lengthCadena);
-        response.setPalindromo(isPalindromo);
-        response.setLengthCaracteresEspeciales(lengthCaracteresEspeciales);
+        response.setLengthCadena(longitudCadena);
+        response.setIsPalindromo(esPalindromo ? 1 : 0);
+        response.setLengthCaracteresEspeciales(totalCaracteresEspeciales);
 
         return response;
     }

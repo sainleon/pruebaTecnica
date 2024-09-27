@@ -8,5 +8,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PalindromeRequest {
-    private String cadena;
+    private String palindromo;
 }

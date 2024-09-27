@@ -15,12 +15,24 @@ public class PalindromeServiceTests {
     @Test
     public void testProcessPalindrome() {
         PalindromeRequest request = new PalindromeRequest();
-        request.setCadena("anilina");
+        request.setPalindromo("anilina");
 
-        PalindromeResponse response = palindromeService.processPalindrome(request);
+        PalindromeResponse response = palindromeService.verificarPalindromo(request);
 
         assertEquals(7, response.getLengthCadena());
-        assertTrue(response.isPalindromo());
+        assertEquals(1, response.getIsPalindromo());
         assertEquals(0, response.getLengthCaracteresEspeciales());
+    }
+
+    @Test
+    public void testPalindromeWithSpacesAndSpecialCharacters() {
+        PalindromeRequest request = new PalindromeRequest();
+        request.setPalindromo("anita lava la tina!!!");
+
+        PalindromeResponse response = palindromeService.verificarPalindromo(request);
+
+        assertEquals(21, response.getLengthCadena());
+        assertEquals(0, response.getIsPalindromo());
+        assertEquals(3, response.getLengthCaracteresEspeciales());  // 3 signos de exclamación
     }
 }
