@@ -45,16 +45,22 @@ IntelliJ IDEA detectará automáticamente el proyecto como un proyecto de Maven 
 - Método HTTP: POST
 - Descripción: Recibe una cadena de texto en formato JSON y devuelve si es un palíndromo, su longitud y el conteo de caracteres especiales.
 
-Ejemplo de JSON de entrada:
-{
-"palindromo": "Anita lava la tina"
-}
-Respuesta esperada:
-{
-"lengthCadena": 18,
-"isPalindromo": 1,
-"lengthCaracteresEspeciales": 0
-}
+
+  **Ejemplo de JSON de entrada**:
+  ```json
+  {
+    "palindromo": "Anita lava la tina"
+  }
+  ```
+
+  **Respuesta esperada**:
+  ```json
+  {
+    "lengthCadena": 18,
+    "isPalindromo": true,
+    "lengthCaracteresEspeciales": 4
+  }
+  ```
 
 
 
