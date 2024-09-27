@@ -1,9 +1,10 @@
-package org.example.pruebatecnica.service;
+package org.example.pruebatecnica.users.service;
 
-import org.example.pruebatecnica.model.User;
+import org.example.pruebatecnica.users.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 @Service

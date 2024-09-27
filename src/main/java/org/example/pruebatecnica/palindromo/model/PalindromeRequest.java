@@ -1,4 +1,4 @@
-package org.example.pruebatecnica.model;
+package org.example.pruebatecnica.palindromo.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

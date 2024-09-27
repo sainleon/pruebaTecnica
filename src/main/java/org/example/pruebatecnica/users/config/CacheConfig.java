@@ -1,4 +1,4 @@
-package org.example.pruebatecnica.config;
+package org.example.pruebatecnica.users.config;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Configuration;

@@ -1,7 +1,7 @@
-package org.example.pruebatecnica.controller;
+package org.example.pruebatecnica.users.controller;
 
-import org.example.pruebatecnica.model.User;
-import org.example.pruebatecnica.service.UserService;
+import org.example.pruebatecnica.users.model.User;
+import org.example.pruebatecnica.users.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

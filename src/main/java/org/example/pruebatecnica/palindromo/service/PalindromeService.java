@@ -1,7 +1,7 @@
-package org.example.pruebatecnica.service;
+package org.example.pruebatecnica.palindromo.service;
 
-import org.example.pruebatecnica.model.PalindromeRequest;
-import org.example.pruebatecnica.model.PalindromeResponse;
+import org.example.pruebatecnica.palindromo.model.PalindromeRequest;
+import org.example.pruebatecnica.palindromo.model.PalindromeResponse;
 import org.springframework.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 
@@ -10,8 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 public class PalindromeService {
 
     public PalindromeResponse verificarPalindromo(PalindromeRequest request) {
-        String cadena = request.getPalindromo().replaceAll("\\s", "").toLowerCase();  // Remover espacios y caracteres especiales
-        String reversa = new StringBuilder(cadena).reverse().toString();
+        String cadena = request.getPalindromo().replaceAll("[^a-zA-Z]", "").toLowerCase();  // Remover espacios y caracteres especiales
+        String reversa = new StringBuilder(cadena).reverse().toString().toLowerCase();
 
         boolean esPalindromo = cadena.equals(reversa);
 
