@@ -57,7 +57,7 @@ IntelliJ IDEA detectará automáticamente el proyecto como un proyecto de Maven 
   ```json
   {
     "lengthCadena": 18,
-    "isPalindromo": true,
+    "isPalindromo": 0,
     "lengthCaracteresEspeciales": 4
   }
   ```
